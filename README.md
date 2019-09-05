@@ -1,5 +1,6 @@
 ### Taro Components
 
+![index](./images/index.png)
 ![基础组件](./images/dg-ui-base.gif)
 
 ![视图组件](./images/dg-ui-view.gif)
