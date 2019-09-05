@@ -1,0 +1,60 @@
+@import '../../assets/constants.less';
+.modal-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 0;
+  bottom: 0;
+  background: transparent;
+  opacity: 0;
+  display: flex;
+  z-index: 999999;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity .3s linear,height 0s ease .3s;
+}
+.modal-wrap.show {
+  height: 100vh;
+  opacity: 1;
+  transition: opacity .3s linear,height 0s ease 0s
+}
+.modal-wrap.no_animate_show {
+  height: 100vh;
+  opacity: 1;
+}
+.modal-box {
+  width: 90%;
+  padding: 40px 50px 40px 50px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 12Px;
+  .modal-title {
+    font-size: 46px;
+    font-weight: bold;
+    color: @textcolor;
+  }
+  .modal-container {
+    margin-top: 30px;
+  }
+  .modal-btn-wrap {
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .btn {
+      width: 46%;
+      box-sizing: border-box;
+      border-radius: 8Px;
+      height: 96px;
+      line-height: 96px;
+      text-align: center;
+      font-size: @middlefontsize;
+      color: #fff;
+      background: @maincolor
+    }
+  }
+}

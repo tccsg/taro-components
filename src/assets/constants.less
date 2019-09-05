@@ -1,0 +1,44 @@
+@commonfontsize: 28px;
+@smallfontsize: 24px;
+@tsmallfontsize: 22px;
+@stomfontsize: 26px;
+@middlefontsize: 30px;
+@bigbtnFontSize: 34px;
+@maincolor: #27AE7E;
+@textcolor: #414743;
+@titleColor: #414743;
+@aidcolor: #959595;
+@bordercolor: #DBDEDA;
+@itemBorderColor: #DBDEDA;
+@placeholderColor: #BBBBBB;
+@commonBorderRadius: 8Px;
+@statusBtnBColor: #E4E8E7;
+@itemhoverColor: #F7F7F7;
+@backgroundColor: #f5f5f5;
+@lightGreenBg: #8EE8C8;
+
+@defaultBD: border-bottom;
+
+.generate-border (@bds, @i:1, @bc) when (@i =< length(@bds)) {
+  @bd: extract(@bds, @i);
+  @{bd}: 1Px solid @bc;
+  .generate-border(@bds, (@i + 1), @bc)
+}
+.border-pixel-one(@bds:@defaultBD, @bc:@itemBorderColor) {
+  position: relative;
+  &::before{ 
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    .generate-border(@bds, 1, @bc);
+    height: 200%;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+  }
+}

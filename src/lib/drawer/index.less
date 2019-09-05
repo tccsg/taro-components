@@ -1,0 +1,69 @@
+@import '../../assets/constants.less';
+.drawer-submit-btn {
+  background: @maincolor
+}
+.mask {
+  background: rgba(0,0,0,1);
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  opacity: 0;
+  height: 0;
+  left:0;
+  transition: opacity .3s linear,height 0s ease .3s;
+}
+.drawer-box {
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border-top-left-radius: 8Px;
+  border-top-right-radius: 8Px;
+  padding: 40px;
+  z-index: 99;
+  box-sizing: border-box;
+  transition: all .3s ease-out;
+  padding-bottom: 50px;
+}
+.drawer-box .drawer-container {
+  margin-top: 30px;
+}
+// .drawer-btn-wrap {
+//   margin-bottom: calc(constant(safe-area-inset-bottom));
+//   margin-bottom: calc(env(safe-area-inset-bottom));
+// }
+.drawer-box .drawer-submit-btn {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 50px;
+  border-radius: 8Px;
+  height: 96px;
+  line-height: 96px;
+  text-align: center;
+  font-size: @middlefontsize;
+  color: #fff
+}
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.drawer-header .title {
+  font-size: 46px;
+  font-weight: 700
+}
+.drawer-header .closebtn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.drawer-header .closebtn image {
+  width: 32px;
+  height: 32px;
+}
